@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.nature{
+    background: url(../../nature/nature1.jpg);
+    /* background-repeat: no-repeat; */
+    height: 600px;;
+    border: 1px solid black;
+    
+    
+    
+}
+.btns {
+    display: flex;
+    justify-content: center;
+    font-size: xxx-large;
+      
+
+}
+
+.road{
+    border: 1px solid black;
+    background: url(../../road/road4.jpg);
+    height:250px;
+}
+
+
+.car{
+    border: 1px solid black;
+    /* background: url(); */
+    /* height:150px; */
+    
+    margin-top:50px;
+}
+
+#startBtn{
+    /* float: left;
+    margin: 200px 0 0 800px; */
+    width:200px;
+    height:100px;
+    background-color: greenyellow;
+    border-radius: 15px;
+    margin-top: 200px;
+    font-size: xxx-large;
+    color: white;
+    margin-left: 10px; 
+}
+
+#endBtn{
+    /* margin: 200px 0 0 0; */
+    margin-top: 200px;
+    width :200px;
+    height:100px;
+    border-radius: 15px;
+    background-color: red;
+    font-size: xxx-large;
+    color: white;
+
+}

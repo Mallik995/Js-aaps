@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow-y: hidden;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.city-sceen{
+    width:100%;
+    height:100vh;
+    position:relative;
+    overflow-x: hidden;
+    background: linear-gradient(rgb(143,255,245),rgb(247,167,87));
+    /* border: 1px solid red; */
+}
+
+.city-sceen:before{ /*to create Moon */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    left:0;
+    right:0;
+    margin:0 auto;
+    content: '';
+    top:3em;
+    background: radial-gradient(
+        rgba(230,222,222,0.1),
+        rgba(255,255,255,0.5));
+        /* border: 1px solid red; */
+}
+
+.cloud{
+    background:url('../src/images/cloud.png');
+    height:160px;
+    background-repeat: repeat-x;
+    margin-top:3em;
+    border: 1px solid red;
+    
+}
+.road{
+    background:url('../src/images/way.png');
+    height:650px;
+    width:500%;
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid red;
+    
+}
+
+.car{
+    position: absolute;
+    bottom: 7%;
+    left:40%;
+   
+}
+
+@keyframes cloudAnimation{
+    100%{
+            transform: translateX(-1200px);
+            opacity: 0.4;
+    }
+}
+@keyframes roadAnimation{
+    100%{
+            transform: translateX(-2500px);
+            
+    }
+}
+@keyframes carAnimation{
+    100%{
+            transform: translateY(-5px);
+            
+    }
+    50%{
+            transform: translateY(1px);
+            
+    }
+    0%{
+            transform: translateY(-5px);
+            
+    }
+}
+
+.daytonight{
+    /* background: linear-gradient(180deg, rgb(15, 4, 76),rgb(163, 221, 203) ) */
+    background: linear-gradient(180deg, rgb(15, 4, 76),#D84C73,#009F9D,#6C5B7B)
+}
+
+.roadAnimationTogg{
+    animation: roadAnimation 5s linear infinite;
+}
+
+.carAnimationTogg{
+    animation: carAnimation 1s linear infinite;
+}
+.cloudAnimation{
+    animation: cloudAnimation 10s linear infinite;
+}
+
+
+.displayFlag{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    line-height:50vh;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.7)
+}
+
+.displayFlag h2{
+    color:white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.displayFlag h2 span{
+    color: fuchsia;
+    font-size: 50px;
+}
