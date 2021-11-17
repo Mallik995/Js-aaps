@@ -36,7 +36,7 @@ body{
 
 .cloud{
     background:url('../src/images/cloud.png');
-    height:160px;
+    height:260px;
     background-repeat: repeat-x;
     margin-top:3em;
     /* border: 1px solid red; */
@@ -45,12 +45,12 @@ body{
 .road{
     background:url('../src/images/way.png');
     height:650px;
-    width:500%;
+    /* width:500%; */
+    width:310%;
     background-repeat: repeat-x;
     position: absolute;
-    bottom: 0;
-    /* border: 1px solid red; */
-    
+    bottom: 0px;
+    /* border: 1px solid red;     */
 }
 
 .car{
