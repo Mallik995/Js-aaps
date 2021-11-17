@@ -35,6 +35,32 @@ function chatBotVoice(message) {
         let finalResult = intro[Math.floor(Math.random() * intro.length)];
         speech.text = finalResult;
     }
+
+    if (message.includes('fine')) {
+        let finalresult = help[Math.floor(Math.random() * help.length)];
+        speech.text = finalresult;
+    }
+    if (message.includes('how are you' || 'how are you doing today')) {
+        let finalresult = greetings[Math.floor(Math.random() * greetings.length)];
+        speech.text = finalresult;
+    }
+    if (message.includes('tell me something about you' || 'tell me something about your hobbies')) {
+        let finalresult = hobbies[Math.floor(Math.random() * hobbies.length)];
+        speech.text = finalresult;
+    }
+    if (message.includes('pizza')) {
+        let finalresult = pizzas[Math.floor(Math.random() * pizzas.length)];
+        speech.text = finalresult;
+    }
+    if (message.includes('thank you' || 'thank you so much')) {
+        let finalresult = thank[Math.floor(Math.random() * thank.length)];
+        speech.text = finalresult;
+    }
+    if (message.includes('talk to you' || 'talk')) {
+        let finalresult = closing[Math.floor(Math.random() * closing.length)];
+        speech.text = finalresult;
+    }
+
     window.speechSynthesis.speak(speech);
     chatAreaMain.appendChild(showchatbotmsg(speech.text));
 }
@@ -49,7 +75,11 @@ recognition.onresult = function (e) {
     console.log(transcript);
 }
 
+recognition.onend = function () {
+    mic.style.background = "#ff3b3b";
+}
 mic.addEventListener("click", function () {
+    mic.style.background = 'green'
     recognition.start();
     console.log("Activated");
 })
