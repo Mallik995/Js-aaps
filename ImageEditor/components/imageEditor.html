@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor in JS</title>
+    <link rel="stylesheet" href="./imageEditor.css">
+    <script src="./imageEditor.js" defer></script>
+</head>
+
+<body>
+    <section class="main">
+        <div class="container">
+            <div class="main-outer">
+                <div class="main-left">
+                    <aside>
+                        <h3>Image Filters</h3>
+                        <form action="" id="slider-form">
+                            <p>
+                                <label for="gs">Grayscale</label>
+                                <input type="range" id="gs" name="gs" min="" max="100" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="blur">Blur</label>
+                                <input type="range" id="blur" name="blur" min="0" max="" value="0" class="slider">
+                            </p>
+                            <p>
+                                <label for="hue-rotate">Hue-rotate</label>
+                                <input type="range" id="hue-rotate" name="hue-rotate" min="0" max="" value="0"
+                                    class="slider">
+                            </p>
+                            <p>
+                                <label for="sepia">Sepia</label>
+                                <input type="range" id="sepia" name="sepia" min="0" max="" value="0" class="slider">
+                            </p>
+                            <button type="reset">Reset</button>
+                        </form>
+                    </aside>
+                </div>
+                <div class="main-right">
+                    <form action="" id="myform">
+                        <input type="text" name="" id="onlineurl" placeholder="Image URL">
+                        <button type="submit">Change Image</button>
+                    </form>
+                    <div class="img-area">
+                        <img src="../Images/car.jpg" alt="space for Image" id="targetimage">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
