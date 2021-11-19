@@ -7,9 +7,9 @@ myform.addEventListener('submit', function (e) {
     e.preventDefault();
     let urlimage = document.getElementById('onlineurl');
     let urlimageval = urlimage.value;
-    if (urlimageval) {
+    if (urlimageval.length) {
         targetimage.setAttribute('src', urlimageval);
-        urlimageval.value = " ";
+        urlimage.value = " ";
     }
 });
 
