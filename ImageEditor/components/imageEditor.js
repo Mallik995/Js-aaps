@@ -9,7 +9,7 @@ myform.addEventListener('submit', function (e) {
     let urlimageval = urlimage.value;
     if (urlimageval.length) {
         targetimage.setAttribute('src', urlimageval);
-        urlimage.value = " ";
+        urlimage.value = "";
     }
 });
 
